@@ -193,6 +193,25 @@ body {
     font-size: 2em;
     color: #8B4513;
     font-weight: bold;
+    position: relative;
+    letter-spacing: 3px;
+}
+
+.intermission h2:before, .intermission h2:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 1px;
+    background-color: #8B4513;
+}
+
+.intermission h2:before {
+    left: -80px;
+}
+
+.intermission h2:after {
+    right: -80px;
 }
 
 /* Responsive Design */
@@ -221,6 +240,18 @@ body {
     .piece h3 {
         font-size: 1.2em;
     }
+    
+    .intermission h2:before, .intermission h2:after {
+        width: 40px;
+    }
+    
+    .intermission h2:before {
+        left: -50px;
+    }
+    
+    .intermission h2:after {
+        right: -50px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -243,5 +274,9 @@ body {
     
     .piece h3 {
         font-size: 1.1em;
+    }
+    
+    .intermission h2:before, .intermission h2:after {
+        display: none;
     }
 }
